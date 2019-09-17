@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.container-fluid{
+  padding: 0px !important;
+}
+
+.row{
+  margin: 0px !important;
+}
+
+
+.mat-form-field-label {
+  color : white !important;
+}
+
+.mat-form-field-underline{
+  background-color:white !important;
+}
+
+.mat-form-field-ripple{
+  background-color:#dedede !important;
+}

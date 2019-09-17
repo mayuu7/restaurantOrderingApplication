@@ -1,0 +1,119 @@
+// sidenav Style
+$sideNavWidth:350px;
+$sideNavBackgroundColor:#00675b;
+// mainContent Style
+$bodyBackgroundColor:#009688;
+
+//card style
+$cardBackgroundColor:#00695c;
+//addDishButton style
+$addDishButtonBackground:#e65100;
+
+//sideNav Item Card
+$sideNavItemCardColor:#287f70;
+
+//for mobile
+$maxWidthMobile:496px;
+$minWidthMobile:600px;
+
+//MenuContainer Style
+#MenuContainer{
+  height: 100vh;
+}
+
+
+// mainContent Style
+
+#mainContent{
+  background: $bodyBackgroundColor;
+  height: 100vh;
+}
+
+// sidenav Style
+
+.sidenavBar{
+  width: $sideNavWidth;
+  background: $sideNavBackgroundColor;
+  height: 100vh;
+}
+
+
+#searchInputDiv{
+  text-align: center;
+}
+
+#searchInputField{
+  float: left;
+  width: 100%;
+  border-radius:33px;
+}
+
+#searchInputField:focus{
+  border:2px solid #3b3a3a;
+  box-shadow: 0 0 0 0.1rem #d7d7d7;
+}
+
+#searchInputDiv button {
+  float: left;
+}
+
+/* Clear floats */
+#searchInputDiv::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menuItemCard{
+  width: 100%;
+  background-color: $cardBackgroundColor;
+  color:white;
+}
+
+.menuItemCard mat-card-subtitle{
+  color:white;
+}
+
+.menuItemCard mat-card-content{
+  color:white;
+}
+
+.AddDishButton{
+  float: right;
+  background: $addDishButtonBackground;
+  font-size: 20px;
+}
+
+.cardThumbnailImage{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: $maxWidthMobile) {
+  .sidenavBar{
+    width:250px !important;
+  }
+}
+
+.itemCardSideNav{
+  width: 100%;
+  background-color: $sideNavItemCardColor;
+  color:white;
+  margin-bottom:15px;
+  height: 50px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+#sidePanelCloseRow button{
+  margin-left: 87%;
+}
+
+#sideNavToggleButton{
+  background: $cardBackgroundColor;
+  color:white;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left:15px;
+}

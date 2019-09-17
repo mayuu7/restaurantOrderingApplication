@@ -1,0 +1,64 @@
+<mat-sidenav-container class="container-fluid" id="MenuContainer">
+  <mat-sidenav class="sidenavBar" #sidenav mode="over" [(opened)]="opened" (opened)="events.push('open!')"
+  (closed)="events.push('close!')">
+    <div class="row" id="sidePanelCloseRow">
+      <button mat-icon-button aria-label="Close" (click)="sidenav.toggle()">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+    </div>
+    <br />
+    <div class="row" *ngFor="let value of filteredCategories">
+     <mat-card class="itemCardSideNav" (click)="sidenav.toggle();filterByCategory(value)">
+       <mat-card-header>
+         {{value}}
+       </mat-card-header>
+     </mat-card>
+
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content id="mainContent" class="container-fluid">
+
+    <div class="row">
+      <p><button mat-raised-button (click)="sidenav.toggle()" id="sideNavToggleButton">Filter By Category   <mat-icon>filter_list</mat-icon></button></p>
+    </div>
+    <br /><br />
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"></div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="searchInputDiv">
+        <div class="form-group">
+          <input type="text" class="form-control" id="searchInputField" placeholder="Enter the Dish Name" [(ngModel)]="searchString" />
+        </div>
+
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"></div>
+    </div>
+    <br /><br />
+    <div class="row">
+      <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
+      <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" *ngFor='let menuData of filteredMenuData'>
+            <mat-card class="menuItemCard">
+              <mat-card-header>
+                <div mat-card-avatar [style.backgroundImage]="'url(' + menuData.imageUrl + ')'" class="cardThumbnailImage"></div>
+                <mat-card-title>{{menuData.dishName}}</mat-card-title>
+                <mat-card-subtitle>{{menuData.dishCategory}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <mat-form-field class="example-full-width">
+                  <input matInput type="number" min="1" placeholder="Quantity" value="1">
+                </mat-form-field>
+                <button mat-mini-fab class="AddDishButton">+</button>
+              </mat-card-content>
+
+            </mat-card>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
+
+
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

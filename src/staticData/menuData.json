@@ -1,0 +1,50 @@
+[
+{
+  "dishId":20,
+  "dishName":"Green Salad",
+  "dishCategory":"Salads",
+  "dishCategoryId":1,
+  "dishPrice":200,
+  "imageUrl":"assets/images/greenSalad.jpg"
+},
+{
+  "dishId":21,
+  "dishName":"Onion Salad",
+  "dishCategory":"Salads",
+  "dishCategoryId":1,
+  "dishPrice":150,
+  "imageUrl":"assets/images/onionSalad.jpeg"
+},
+{
+"dishId":22,
+"dishName":"Pasta Salad",
+"dishCategory":"Salads",
+"dishCategoryId":1,
+"dishPrice":200,
+"imageUrl":"assets/images/foodImage.jpg"
+},
+{
+"dishId":23,
+"dishName":"Fruit Salad",
+"dishCategory":"Salads",
+"dishCategoryId":1,
+"dishPrice":200,
+"imageUrl":"assets/images/fruitSalad.jpg"
+},
+{
+"dishId":24,
+"dishName":"Chilli Paneer",
+"dishCategory":"Starters",
+"dishCategoryId":2,
+"dishPrice":250,
+"imageUrl":"assets/images/chilliPaneer.jpg"
+},
+{
+"dishId":25,
+"dishName":"Manchoorian",
+"dishCategory":"Starters",
+"dishCategoryId":2,
+"dishPrice":300,
+"imageUrl":"assets/images/manchoorian.jpg"
+}
+]
